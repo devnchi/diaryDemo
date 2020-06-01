@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Welcome to Diary</title>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Candal|Nothing+You+Could+Do|Paytone+One|Vidaloka&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="entry.css">
+</head>
+<body>
+        <h2>Add Entry</h2>
+        <a href="/profile">Go to Profile</a>
+<div>
+    <form action="/messages" method="POST">
+        <textarea placeholder="write your lil' heart out" name="ent"></textarea>
+        <input type="text" class="hide" name="user" value="<%= user._id %>">
+
+        <br>
+
+        <input type="date" name="date">
+        <button type="submit" method='POST'>Submit</button>
+    </form>
+</div>
+
+
+
+    <script src="main.js"></script>
+
+    </body>
+    </html>

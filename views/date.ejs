@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Welcome to Diary</title>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Candal|Nothing+You+Could+Do|Paytone+One|Vidaloka&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="entry.css">
+</head>
+<body>
+    <div class="container">
+      <h3>Entries</h3>
+      <a href="/profile"><h2>Go To Profile</h2></a>
+        <ul class="messages">
+              <!-- <% for(var i=0; i< messages.length; i++) {%> -->
+                  <li class="message">
+                    <a href="/date/<%= messages[i].date%>"><span><%= messages[i].date%> <span><%= messages[i].ent%></span></span></a>
+                    <button><i class="fa fa-trash" aria-hidden="true"></i></button> 
+
+                    <!-- <span><%= messages[i].date%></span>
+                    <span><%= messages[i].ent%></span> -->
+                    <!-- <span><%= messages[i].id%></span> -->
+                    <!-- <span><%= messages[i].thumbUp -= messages[i].thumbDown %></span> -->
+                    <!-- <span><i class="fa fa-thumbs-up" aria-hidden="true"></i></span>
+                    <span><i class="fa fa-thumbs-down" aria-hidden="true"></i></span>
+                    <span><i class="fa fa-trash" aria-hidden="true"></i></span> -->
+                  </li>
+              <!-- <% } %> -->
+          </ul>
+        </div>
+
+        <script src="https://kit.fontawesome.com/077191d827.js" crossorigin="anonymous"></script>
+
+<script src="main.js"></script>
+
+</body>
+</html>

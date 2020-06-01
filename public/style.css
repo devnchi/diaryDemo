@@ -1,0 +1,24 @@
+body{
+  background-image: url("./img/yellowDiaryBg.jpg");
+  text-align: center;
+  align-content: center;
+  background-size: contain;
+  font-family: 'Paytone One', sans-serif;
+}
+h1 {
+  font-size: 50px;
+  font-family: 'Paytone One', sans-serif;
+}
+.container div {
+  background-color: gold;
+  width: 50%;
+  padding: 3%;
+  margin: 50px auto;
+  color: white;
+}
+.hide{
+  display: none;
+}
+.show {
+  display: block; 
+}

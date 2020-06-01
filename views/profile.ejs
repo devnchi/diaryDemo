@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Welcome to Diary</title>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Candal|Nothing+You+Could+Do|Paytone+One|Vidaloka&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="profile.css">
+</head>
+<body class="body">
+<section class="container">
+    <section class="leftColumn">
+        <!-- LOCAL INFORMATION -->
+        <section class="userBox">
+            <section class="well">
+                <h3><span class="fa fa-user"></span>My Profile</h3>
+
+                <% if (user.local.email) { %>
+                    <p>
+                      <strong>Welcome To Your Diary :)</strong>
+                      <br>
+                      <strong>Date:</strong>
+                      <br>
+                      <strong>Weather:</strong>
+                      <br>
+                      <strong># of entires:</strong>
+                        <!-- <strong>id</strong>: <%= user._id %><br>
+                        <strong>email</strong>: <%= user.local.email %><br>
+                        <strong>password</strong>: <%= user.local.password %> -->
+                    </p>
+                    <a href="/unlink/local" class="btn btn-default">Unlink</a>
+                <% } else { %>
+                    <a href="/connect/local" class="btn btn-default">Connect Local</a>
+                <% } %>
+
+            </section>
+        </section>
+
+        <section class="bottomLeft">
+          <h2>Find an Entry</h2>
+          <form action="/date" method="GET">
+            <input id="dateSelector" type="date" name="" value="">
+            <button id="sendSearch" type="button" name="button">Find Entry</button>
+          </form>
+          <button class="entButton"><a href="/add"><h2> Add Entry </h2></a></button>
+        </section>
+
+
+    </section>
+
+    <section class="rightColumn">
+      <section class="entriesCenter">
+        <h3>My Entries</h3>
+      </section>
+      <section class="actualEntries">
+          <ul class="messages">
+            <% for(var i=0; i< messages.length; i++) {%>
+                <li class="message">
+                  <span><a href="/date/<%= messages[i].date%>"><%= messages[i].date%></a> <span contenteditable="true"><%= messages[i].ent%></span></span>
+                  <form data-id="<%= messages[i]._id%>" class="hide" action="index.html" method="post">
+                    <input class="hide" type="text" name="entId" value="<%= messages[i]._id%>">
+                    <input type="date" name="updateDate" value="<%= messages[i].date%>">
+                    <textarea name="updateEnt" rows="8" cols="80"><%= messages[i].ent%></textarea>
+                    <button type="button" class="update" data-id="<%= messages[i]._id%>">Update Entry</button>
+                  </form>
+                  <button data-id="<%= messages[i]._id%>" type="button" class="updateTwo">Update Entry</button>
+                  <span class="trashCan"><i data-id="<%= messages[i]._id%>" class="fa fa-trash" aria-hidden="true"></i></span>
+                </li>
+            <% } %>
+          </ul>
+
+      </section>
+  </section>
+</section>
+
+<script src="https://kit.fontawesome.com/077191d827.js" crossorigin="anonymous"></script>
+<script src="main.js"></script>
+
+</body>
+</html>

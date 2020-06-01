@@ -1,0 +1,67 @@
+body {
+  background-image: url("./img/YellowPaperBg.jpg");
+  background-size: cover;
+  font-family: 'Paytone One', sans-serif;
+}
+.userBox {
+  background-color: white;
+}
+.container {
+  margin-top: 6%;
+}
+.leftColumn {
+  width: 38%;
+  float: left;
+  align-content: center;
+}
+.bottomLeft {
+  text-align: center;
+  align-content: center;
+  margin: 50px auto;
+}
+.bottomLeft h2 {
+  font-size: 30px;
+  font-family: 'Paytone One', sans-serif;
+}
+.entButton {
+  margin-top: 5%;
+  padding: 2%;
+  background-color: green;
+}
+.bottomLeft button a {
+  text-decoration: none;
+}
+.rightColumn {
+  width: 60%;
+  float: left;
+  text-align: center;
+  background-color: white;
+  margin-left: 2%;
+}
+.entriesCenter {
+  text-align: center;
+  margin-top: 8%;
+}
+.entriesCenter h2 {
+  font-size: 20px;
+  font-family: 'Paytone One', sans-serif;
+}
+.entriesCenter h3 {
+  font-size: 35px;
+  font-family: 'Paytone One', sans-serif;
+}
+.actualEntries {
+  margin-top: 10%;
+  font-size: 25px;
+}
+.actualEntries li {
+  list-style-type: none;
+  text-align: center;
+  font-family: 'Nothing You Could Do', cursive;
+}
+.show {
+
+}
+textarea {
+  width: 50%;
+}

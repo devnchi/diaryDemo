@@ -1,0 +1,21 @@
+* {
+  box-sizing: border-box;
+  text-align: center;
+  align-content: center;
+}
+body {
+  background-image: url("./img/yellowAbstarctBg.jpg");
+  background-size: cover;
+  font-family: 'Paytone One', sans-serif;
+}
+h2 {
+  font-family: 'Paytone One', sans-serif;
+}
+form textarea {
+  width: 50%;
+  height: 800px;
+  background-color: white;
+  font-size: 25px;
+  padding: 2%;
+  font-family: 'Nothing You Could Do', cursive;
+}
